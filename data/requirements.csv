@@ -1,0 +1,6 @@
+id,requirement_text,is_ambiguous,ambiguity_types,severity,trigger_words,suggested_rewrite
+REQ-001,"The system should process user transactions quickly and update the database where appropriate.",true,"Lexical;Uncertainty",High,"quickly;where appropriate;should","The system shall process user transactions within 500 milliseconds and update the transaction database upon successful execution."
+REQ-002,"Data should be periodically backed up by the system administrator.",true,"Syntactic;Pragmatic",Medium,"periodically;should","The system shall execute an automated encrypted backup of the primary database every 24 hours at 02:00 UTC."
+REQ-003,"The system shall authenticate user login requests using OAuth 2.0 within 2 seconds of receipt.",false,"None",None,"",""
+REQ-004,"The UI must be user-friendly and load pages as fast as possible.",true,"Lexical;Semantic",High,"user-friendly;as fast as possible","The system shall render web pages within 1.5 seconds on a standard 100 Mbps internet connection."
+REQ-005,"If an error occurs, the user might be notified if necessary.",true,"Uncertainty;Pragmatic",High,"might;if necessary","The system shall display an error notification modal with an error code and description within 100 milliseconds of an exception."

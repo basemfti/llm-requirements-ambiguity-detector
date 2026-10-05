@@ -1,0 +1,87 @@
+[
+  {
+    "id": "REQ-001",
+    "X": "The system should process user transactions quickly and update the database where appropriate.",
+    "y": {
+      "is_ambiguous": true,
+      "ambiguity_type": [
+        "Lexical",
+        "Uncertainty"
+      ],
+      "trigger_words": [
+        "quickly",
+        "where appropriate",
+        "should"
+      ],
+      "severity": "High",
+      "explanation": "'quickly' lacks a quantitative performance threshold. 'where appropriate' is subjective. 'should' is a weak modal verb.",
+      "suggested_rewrite": "The system shall process user transactions within 500 milliseconds and update the transaction database upon successful execution."
+    }
+  },
+  {
+    "id": "REQ-002",
+    "X": "Data should be periodically backed up by the system administrator.",
+    "y": {
+      "is_ambiguous": true,
+      "ambiguity_type": [
+        "Syntactic",
+        "Pragmatic"
+      ],
+      "trigger_words": [
+        "periodically",
+        "should"
+      ],
+      "severity": "Medium",
+      "explanation": "'periodically' leaves the backup interval undefined. Passive construction hides whether the action is manual or automated.",
+      "suggested_rewrite": "The system shall execute an automated encrypted backup of the primary database every 24 hours at 02:00 UTC."
+    }
+  },
+  {
+    "id": "REQ-003",
+    "X": "The system shall authenticate user login requests using OAuth 2.0 within 2 seconds of receipt.",
+    "y": {
+      "is_ambiguous": false,
+      "ambiguity_type": [],
+      "trigger_words": [],
+      "severity": "None",
+      "explanation": "Clear, verifiable statement using a definitive modal ('shall') with precise protocol and latency constraints.",
+      "suggested_rewrite": null
+    }
+  },
+  {
+    "id": "REQ-004",
+    "X": "The UI must be user-friendly and load pages as fast as possible.",
+    "y": {
+      "is_ambiguous": true,
+      "ambiguity_type": [
+        "Lexical",
+        "Semantic"
+      ],
+      "trigger_words": [
+        "user-friendly",
+        "as fast as possible"
+      ],
+      "severity": "High",
+      "explanation": "'user-friendly' is subjective and untestable. 'as fast as possible' provides no benchmark for acceptance testing.",
+      "suggested_rewrite": "The system shall render web pages within 1.5 seconds on a standard 100 Mbps internet connection."
+    }
+  },
+  {
+    "id": "REQ-005",
+    "X": "If an error occurs, the user might be notified if necessary.",
+    "y": {
+      "is_ambiguous": true,
+      "ambiguity_type": [
+        "Uncertainty",
+        "Pragmatic"
+      ],
+      "trigger_words": [
+        "might",
+        "if necessary"
+      ],
+      "severity": "High",
+      "explanation": "'might' introduces modal uncertainty. 'if necessary' leaves the trigger conditions completely undefined.",
+      "suggested_rewrite": "The system shall display an error notification modal with an error code and description within 100 milliseconds of an exception."
+    }
+  }
+]
